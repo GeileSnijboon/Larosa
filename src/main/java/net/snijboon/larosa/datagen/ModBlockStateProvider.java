@@ -17,6 +17,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.OCEANIC_ORE);
         blockWithItem(ModBlocks.PLACEHOLDER_BLOCK);
+        blockWithItem(ModBlocks.ABYSSAL_END_PORTAL_BLOCK);
 
     }
 

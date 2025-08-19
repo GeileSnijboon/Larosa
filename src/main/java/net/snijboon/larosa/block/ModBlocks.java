@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.snijboon.larosa.Larosa;
+import net.snijboon.larosa.block.custom.AbyssalEndPortal;
 import net.snijboon.larosa.item.ModItems;
 
 import java.util.function.Supplier;
@@ -24,6 +25,12 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> OCEANIC_ORE = registerBlock("oceanic_ore",
             () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F).sound(SoundType.DEEPSLATE)));
+
+
+
+
+    public static final RegistryObject<Block> ABYSSAL_END_PORTAL_BLOCK = registerBlock("abyssal_end_portal_block",
+            () -> new AbyssalEndPortal(BlockBehaviour.Properties.of().noLootTable().noOcclusion().instabreak().sound(SoundType.SCULK_CATALYST)));
 
 
     private static  <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -10,15 +10,21 @@ import net.snijboon.larosa.Larosa;
 import net.snijboon.larosa.worldgen.ModBiomesModifiers;
 import net.snijboon.larosa.worldgen.ModConfiguredFeatures;
 import net.snijboon.larosa.worldgen.ModPlacedFeatures;
+import net.snijboon.larosa.worldgen.biome.ModBiomes;
+import net.snijboon.larosa.worldgen.dimension.ModDimensions;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomesModifiers::bootstrap);
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomesModifiers::bootstrap)
+            .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem)
+            .add(Registries.BIOME, ModBiomes::bootstrap);
+
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(Larosa.MOD_ID));
