@@ -3,6 +3,8 @@ package net.snijboon.larosa.block;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -10,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.snijboon.larosa.Larosa;
+import net.snijboon.larosa.fluid.ModFluids;
 import net.snijboon.larosa.item.ModItems;
 
 import java.util.function.Supplier;
@@ -34,8 +37,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(8).sound(SoundType.CALCITE)));
 
 
-
-
+    public static final RegistryObject<LiquidBlock> ABYSSAL_WATER_BLOCK = BLOCKS.register("abyssal_water_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_ABYSSAL_WATER, BlockBehaviour.Properties.of().noLootTable().replaceable().noCollission().strength(100).sound(SoundType.EMPTY)));
 
 
     private static  <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

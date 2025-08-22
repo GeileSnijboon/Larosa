@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "larosa:item/abyssal_water_bucket"
+  }
+}

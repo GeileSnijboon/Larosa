@@ -8,7 +8,7 @@
     "Name": "larosa:deep_abyssal_stone"
   },
   "default_fluid": {
-    "Name": "minecraft:water"
+    "Name": "larosa:abyssal_water_block"
   },
   "spawn_target": [],
   "noise": {
@@ -37,7 +37,7 @@
       "argument1": {
         "type": "y_clamped_gradient",
         "from_y": 30,
-        "to_y": 100,
+        "to_y": 80,
         "from_value": 1.25,
         "to_value": -1.25
       },
@@ -45,7 +45,7 @@
         "type": "noise",
         "noise": "larosa:abyss_noise",
         "xz_scale": 1,
-        "y_scale": 0.30
+        "y_scale": 0.7
       }
     }
   },

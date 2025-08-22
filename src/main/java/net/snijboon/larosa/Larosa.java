@@ -1,6 +1,8 @@
 package net.snijboon.larosa;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
@@ -16,6 +18,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.snijboon.larosa.block.ModBlocks;
+import net.snijboon.larosa.fluid.ModFluidTypes;
+import net.snijboon.larosa.fluid.ModFluids;
 import net.snijboon.larosa.item.ModCreativeModeTabs;
 import net.snijboon.larosa.item.ModItems;
 import net.snijboon.larosa.worldgen.biome.ModTerrablender;
@@ -41,6 +45,9 @@ public class Larosa {
         ModCreativeModeTabs.register(modEventBus);
 
         ModTerrablender.registerBiomes();
+
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -71,6 +78,8 @@ public class Larosa {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_ABYSSAL_WATER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_ABYSSAL_WATER.get(), RenderType.translucent());
 
         }
     }
