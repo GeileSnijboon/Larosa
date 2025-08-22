@@ -19,7 +19,7 @@ import net.snijboon.larosa.block.ModBlocks;
 import net.snijboon.larosa.item.ModCreativeModeTabs;
 import net.snijboon.larosa.item.ModItems;
 import net.snijboon.larosa.worldgen.biome.ModTerrablender;
-import net.snijboon.larosa.worldgen.biome.surface.ModSurfaceRules;
+
 import org.slf4j.Logger;
 import terrablender.api.SurfaceRuleManager;
 
@@ -51,7 +51,7 @@ public class Larosa {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
-        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
+
 
     }
 

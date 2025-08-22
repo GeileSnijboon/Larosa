@@ -1,5 +1,15 @@
 {
   "creativetab.test_tab": "Test Tab",
+  "creativetab.abyss_tab": "Abyssal Dimention Tab",
 
-  "item.larosa.raw_oceanic_ore": "Raw Oceanic Ore"
+  "item.larosa.raw_oceanic_ore": "Raw Oceanic Ore",
+  "item.larosa.placeholder_item": "Placeholder Item",
+
+
+  "block.larosa.abyssal_grass": "Abyssal Grass",
+  "block.larosa.abyssal_stone": "Abyssal Stone",
+  "block.larosa.deep_abyssal_stone": "Deep Abyssal Stone",
+
+
+  "block.larosa.placeholder_block": "Placeholder Block"
 }

@@ -10,7 +10,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.snijboon.larosa.Larosa;
-import net.snijboon.larosa.block.custom.AbyssalEndPortal;
 import net.snijboon.larosa.item.ModItems;
 
 import java.util.function.Supplier;
@@ -26,11 +25,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> OCEANIC_ORE = registerBlock("oceanic_ore",
             () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.0F).sound(SoundType.DEEPSLATE)));
 
+    //abyss
+    public static final RegistryObject<Block> ABYSSAL_GRASS = registerBlock("abyssal_grass",
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(4).sound(SoundType.CALCITE)));
+    public static final RegistryObject<Block> ABYSSAL_STONE = registerBlock("abyssal_stone",
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(6).sound(SoundType.CALCITE)));
+    public static final RegistryObject<Block> DEEP_ABYSSAL_STONE = registerBlock("deep_abyssal_stone",
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(8).sound(SoundType.CALCITE)));
 
 
 
-    public static final RegistryObject<Block> ABYSSAL_END_PORTAL_BLOCK = registerBlock("abyssal_end_portal_block",
-            () -> new AbyssalEndPortal(BlockBehaviour.Properties.of().noLootTable().noOcclusion().instabreak().sound(SoundType.SCULK_CATALYST)));
+
 
 
     private static  <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

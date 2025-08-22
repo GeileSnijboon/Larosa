@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "larosa:block/abyssal_grass_top",
+    "bottom": "larosa:block/abyssal_stone",
+    "side": "larosa:block/abyssal_grass_side"
+  }
+}

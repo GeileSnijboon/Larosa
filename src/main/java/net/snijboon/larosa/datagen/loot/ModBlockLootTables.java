@@ -25,6 +25,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
 
         this.dropSelf(ModBlocks.PLACEHOLDER_BLOCK.get());
+        this.dropSelf(ModBlocks.ABYSSAL_GRASS.get());
+        this.dropSelf(ModBlocks.ABYSSAL_STONE.get());
+        this.dropSelf(ModBlocks.DEEP_ABYSSAL_STONE.get());
 
         this.add(ModBlocks.OCEANIC_ORE.get(),
                 block -> multipleOreDrops(ModBlocks.OCEANIC_ORE.get(), ModItems.RAW_OCEANIC_ORE.get()));

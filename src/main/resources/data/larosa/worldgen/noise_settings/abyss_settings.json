@@ -1,0 +1,89 @@
+{
+  "sea_level": 1,
+  "disable_mob_generation": false,
+  "ore_veins_enabled": false,
+  "aquifers_enabled": false,
+  "legacy_random_source": false,
+  "default_block": {
+    "Name": "larosa:deep_abyssal_stone"
+  },
+  "default_fluid": {
+    "Name": "minecraft:water"
+  },
+  "spawn_target": [],
+  "noise": {
+    "min_y": 0,
+    "height": 256,
+    "size_horizontal": 4,
+    "size_vertical": 1
+  },
+  "noise_router": {
+    "initial_density_without_jaggedness": 0.0,
+    "barrier": 0.0,
+    "fluid_level_floodedness": 0.0,
+    "fluid_level_spread": 0.0,
+    "lava": 0.0,
+    "vein_toggle": 0.0,
+    "vein_ridged": 0.0,
+    "vein_gap": 0.0,
+    "temperature": 0.0,
+    "vegetation": 0.0,
+    "continents": 0.0,
+    "erosion": 0.0,
+    "depth": 0.0,
+    "ridges": 0.0,
+    "final_density": {
+      "type": "add",
+      "argument1": {
+        "type": "y_clamped_gradient",
+        "from_y": 30,
+        "to_y": 100,
+        "from_value": 1.25,
+        "to_value": -1.25
+      },
+      "argument2": {
+        "type": "noise",
+        "noise": "larosa:abyss_noise",
+        "xz_scale": 1,
+        "y_scale": 0.30
+      }
+    }
+  },
+  "surface_rule": {
+    "type": "sequence",
+    "sequence": [
+      {
+        "type": "condition",
+        "if_true": {
+          "type": "stone_depth",
+          "surface_type": "floor",
+          "offset": 0,
+          "add_surface_depth": false,
+          "secondary_depth_range": 0
+        },
+        "then_run": {
+          "type": "block",
+          "result_state": {
+            "Name": "larosa:abyssal_grass"
+          }
+        }
+      },
+      {
+        "type": "condition",
+        "if_true": {
+          "type": "stone_depth",
+          "surface_type": "floor",
+          "offset": 1,
+          "add_surface_depth": true,
+          "secondary_depth_range": 10
+        },
+        "then_run": {
+          "type": "block",
+          "result_state": {
+            "Name": "larosa:abyssal_stone"
+          }
+        }
+      }
+    ]
+  }
+}

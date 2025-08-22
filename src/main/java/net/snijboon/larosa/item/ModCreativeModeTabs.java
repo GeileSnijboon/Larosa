@@ -28,6 +28,16 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> ABYSS_YAB = CREATIVE_MODE_TABS.register("abyss_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ABYSSAL_GRASS.get()))
+                    .title(Component.translatable("creativetab.abyss_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModBlocks.ABYSSAL_GRASS.get());
+                        pOutput.accept(ModBlocks.ABYSSAL_STONE.get());
+                        pOutput.accept(ModBlocks.DEEP_ABYSSAL_STONE.get());
+                    })
+                    .build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }

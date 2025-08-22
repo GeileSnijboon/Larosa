@@ -1,0 +1,11 @@
+{
+  "type": "larosa:abyssal_end_type",
+  "generator": {
+    "type": "noise",
+    "biome_source": {
+      "type": "fixed",
+      "biome": "larosa:abyss"
+    },
+    "settings": "larosa:abyss_settings"
+  }
+}

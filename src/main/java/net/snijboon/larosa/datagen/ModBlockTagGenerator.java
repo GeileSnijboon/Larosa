@@ -21,10 +21,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.OCEANIC_ORE.get());
+                .add(ModBlocks.OCEANIC_ORE.get())
+                .add(ModBlocks.ABYSSAL_GRASS.get())
+                .add(ModBlocks.ABYSSAL_STONE.get())
+                .add(ModBlocks.DEEP_ABYSSAL_STONE.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
-                .add(ModBlocks.OCEANIC_ORE.get());
+                .add(ModBlocks.OCEANIC_ORE.get())
+                .add(ModBlocks.ABYSSAL_GRASS.get())
+                .add(ModBlocks.ABYSSAL_STONE.get())
+                .add(ModBlocks.DEEP_ABYSSAL_STONE.get());
 
 
     }
