@@ -32,6 +32,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ABYSSAL_STONE.get())
                 .add(ModBlocks.DEEP_ABYSSAL_STONE.get());
 
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.SOOTH_LOG.get())
+                .add(ModBlocks.SOOTH_WOOD.get())
+                .add(ModBlocks.STRIPPED_SOOTH_LOG.get())
+                .add(ModBlocks.STRIPPED_SOOTH_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.SOOTH_PLANKS.get());
+
 
     }
 }

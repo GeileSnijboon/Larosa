@@ -28,6 +28,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ABYSSAL_GRASS.get());
         this.dropSelf(ModBlocks.ABYSSAL_STONE.get());
         this.dropSelf(ModBlocks.DEEP_ABYSSAL_STONE.get());
+        this.dropSelf(ModBlocks.SOOTH_LOG.get());
+        this.dropSelf(ModBlocks.SOOTH_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_SOOTH_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_SOOTH_WOOD.get());
+        this.dropSelf(ModBlocks.SOOTH_PLANKS.get());
+
+        this.add(ModBlocks.SOOTH_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.SOOTH_PLANKS.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.add(ModBlocks.OCEANIC_ORE.get(),
                 block -> multipleOreDrops(ModBlocks.OCEANIC_ORE.get(), ModItems.RAW_OCEANIC_ORE.get()));

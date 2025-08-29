@@ -20,6 +20,14 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.test_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RAW_OCEANIC_ORE.get());
+                        pOutput.accept(ModItems.OCEANIC_INGOT.get());
+
+                        pOutput.accept(ModItems.ABYSSAL_FRAGMENT.get());
+                        pOutput.accept(ModItems.ABYSSAL_HEART.get());
+                        pOutput.accept(ModItems.GUARDIANS_SOUL.get());
+
+                        pOutput.accept(ModItems.ABYSSAL_DIVING_GEAR.get());
+                        pOutput.accept(ModItems.DIVING_GEAR.get());
 
                         pOutput.accept(ModBlocks.OCEANIC_ORE.get());
 
@@ -28,13 +36,20 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> ABYSS_YAB = CREATIVE_MODE_TABS.register("abyss_tab",
+    public static final RegistryObject<CreativeModeTab> ABYSS_TAB = CREATIVE_MODE_TABS.register("abyss_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ABYSSAL_GRASS.get()))
                     .title(Component.translatable("creativetab.abyss_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.ABYSSAL_GRASS.get());
                         pOutput.accept(ModBlocks.ABYSSAL_STONE.get());
                         pOutput.accept(ModBlocks.DEEP_ABYSSAL_STONE.get());
+
+                        pOutput.accept(ModBlocks.SOOTH_LOG.get());
+                        pOutput.accept(ModBlocks.SOOTH_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_SOOTH_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_SOOTH_WOOD.get());
+                        pOutput.accept(ModBlocks.SOOTH_LEAVES.get());
+                        pOutput.accept(ModBlocks.SOOTH_PLANKS.get());
                     })
                     .build());
 

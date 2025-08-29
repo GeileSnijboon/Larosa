@@ -1,0 +1,19 @@
+{
+  "feature": "larosa:sooth_tree",
+  "placement": [
+    {
+      "type": "count",
+      "count": 2
+    },
+    {
+      "type": "in_square"
+    },
+    {
+      "type": "heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "biome"
+    }
+  ]
+}

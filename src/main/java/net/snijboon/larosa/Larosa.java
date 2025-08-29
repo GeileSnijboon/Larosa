@@ -22,6 +22,8 @@ import net.snijboon.larosa.fluid.ModFluidTypes;
 import net.snijboon.larosa.fluid.ModFluids;
 import net.snijboon.larosa.item.ModCreativeModeTabs;
 import net.snijboon.larosa.item.ModItems;
+import net.snijboon.larosa.placed_features.foliage.ModFoliagePlacers;
+import net.snijboon.larosa.placed_features.trunk.ModTrunkPlacers;
 import net.snijboon.larosa.worldgen.biome.ModTerrablender;
 
 import org.slf4j.Logger;
@@ -45,6 +47,9 @@ public class Larosa {
         ModCreativeModeTabs.register(modEventBus);
 
         ModTerrablender.registerBiomes();
+
+        ModTrunkPlacers.TRUNK_PLACERS.register(modEventBus);
+        ModFoliagePlacers.FOLIAGE_PLACERS.register(modEventBus);
 
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);

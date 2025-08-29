@@ -1,6 +1,6 @@
 {
   "has_precipitation": false,
-  "temperature": -1.5,
+  "temperature": 0.0,
   "temperature_modifier": "none",
   "downfall": 0.4,
   "effects": {
@@ -12,5 +12,9 @@
   "spawners": {},
   "spawn_costs": {},
   "carvers": {},
-  "features": []
+  "features": [
+    [
+      "larosa:sooth_tree"
+    ]
+  ]
 }

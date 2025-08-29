@@ -21,8 +21,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.RAW_OCEANIC_ORE);
         simpleItem(ModItems.PLACEHOLDER_ITEM);
+
+        simpleItem(ModItems.RAW_OCEANIC_ORE);
+        simpleItem(ModItems.OCEANIC_INGOT);
+        simpleItem(ModItems.ABYSSAL_FRAGMENT);
+        simpleItem(ModItems.ABYSSAL_HEART);
+        simpleItem(ModItems.GUARDIANS_SOUL);
+        simpleItem(ModItems.ABYSSAL_DIVING_GEAR);
+        simpleItem(ModItems.DIVING_GEAR);
 
     }
 
